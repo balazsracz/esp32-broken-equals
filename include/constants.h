@@ -1,3 +1,5 @@
+/* This file has been copied verbatim from https://github.com/bakerstu/openmrn/blob/master/src/utils/constants.hxx */
+
 /** \copyright
  * Copyright (c) 2014, Balazs Racz
  * All rights reserved.
