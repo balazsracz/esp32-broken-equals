@@ -8,7 +8,7 @@ if (config_var() == CONSTANT_TRUE) {
 ```
 will not enter the if block when the value is actually equal!
 
-## output:
+## default output with CONSTANT_TRUE = 1 and CONSTANT_FALSE = 2
 
 When executing the test code the following output is observed on the esp32:
 ```
@@ -51,7 +51,11 @@ test_override_false(2): 2 > 2: 0
 test_override_false(2): 2 >= 2: 1
 ```
 
-Changing the values for CONSTANT_TRUE and CONSTANT_FALSE to 4 and 8 fixes it:
+# Workaround
+
+As one possible fix for this odd issue the CONSTANT_TRUE value can change from 1 to 4 and CONSTANT_FALSE from 2 to 8. The DEFAULT_CONST_TRUE, DEFAULT_CONST_FALSE, OVERRIDE_CONST_TRUE and OVERRIDE_CONST_FALSE would also need similar updates.
+
+## After workaround output
 
 ```
 test_true(4): 4 == 4: 1
